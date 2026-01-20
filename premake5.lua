@@ -14,7 +14,7 @@ workspace "observant"
         kind "ConsoleApp"
         location ("build/%{prj.name}/" .. _ACTION)
         targetname "%{prj.name}"
-        targetdir "bin/%{prj.name}/%{prj.cfg}"
+        targetdir "bin/%{prj.name}/%{cfg.buildcfg}"
         objdir "obj/"
         language "C++"
         cppdialect "C++11"
