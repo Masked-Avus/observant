@@ -1,3 +1,5 @@
+// Version: 1.0.2
+
 #pragma once
 
 #include <vector>
