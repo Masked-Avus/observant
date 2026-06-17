@@ -77,7 +77,9 @@ void Observer::register_event(Subject& subject) {
 
 void Observer::on_do_work(int data) {
     std::cout
-        << "Event firing recognized by [Observer]. (Times observed: "
+        << "Event firing with value of "
+        << data
+        << " recognized by [Observer]. (Times observed: "
         << ++m_incrementor
         << ')' << '\n';
 }

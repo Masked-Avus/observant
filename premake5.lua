@@ -1,5 +1,5 @@
 workspace "observant"
-    configurations { "Debug", "Release" }
+    configurations { "debug", "release" }
     location "build/"
 
     project "observant"
@@ -7,10 +7,12 @@ workspace "observant"
         location ("build/%{prj.name}/" .. _ACTION)
         language "C++"
         cppdialect "C++11"
+        warnings "Extra"
+        fatalwarnings "All"
         files "src/**.hpp"
         includedirs "src/"
 
-    project "observant.tests"
+    project "observant-tests"
         kind "ConsoleApp"
         location ("build/%{prj.name}/" .. _ACTION)
         targetname "%{prj.name}"
@@ -18,6 +20,8 @@ workspace "observant"
         objdir "obj/"
         language "C++"
         cppdialect "C++11"
+        warnings "Extra"
+        fatalwarnings "All"
         files {
             "tests/**.hpp",
             "tests/**.cpp"

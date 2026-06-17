@@ -36,7 +36,7 @@ void run_raw_event_tests() {
         test::assert_equal(subject.did_work.get_callback_count(), expected);
 
         test::assert_false(subject.did_work.add_callback(test::raw::callback_1));
-        test:assert_equal(subject.did_work.get_callback_count(), expected);
+        test::assert_equal(subject.did_work.get_callback_count(), expected);
     });
 
     test::run("Raw_Event::operator+=", "registers callback", []() {
